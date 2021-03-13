@@ -238,7 +238,8 @@ public class LessonSelect extends javax.swing.JFrame {
 
     //When the first lesson is clicked make its lesson slides pop-up in a different window
     private void Lesson3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lesson3MouseClicked
-        new SlideShow().setVisible(true);
+        new HowToLearn().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_Lesson3MouseClicked
 
     public static void main(String args[]) {
