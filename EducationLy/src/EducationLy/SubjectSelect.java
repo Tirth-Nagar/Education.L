@@ -35,7 +35,6 @@ public class SubjectSelect extends javax.swing.JFrame {
     private void initComponents() {
 
         RootWindow = new javax.swing.JPanel();
-        title_img = new javax.swing.JLabel();
         math = new javax.swing.JButton();
         english = new javax.swing.JButton();
         science = new javax.swing.JButton();
@@ -44,6 +43,7 @@ public class SubjectSelect extends javax.swing.JFrame {
         FactPrompt = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Fact = new javax.swing.JTextArea();
+        title = new javax.swing.JLabel();
         MenuBar = new javax.swing.JMenuBar();
         File = new javax.swing.JMenu();
         exit = new javax.swing.JMenuItem();
@@ -56,28 +56,22 @@ public class SubjectSelect extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(0, 0));
         setName("SubjectSelect"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(550, 500));
         setResizable(false);
         setSize(new java.awt.Dimension(550, 500));
 
-        RootWindow.setBackground(java.awt.Color.black);
+        RootWindow.setBackground(new java.awt.Color(255, 255, 255));
         RootWindow.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        title_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EducationLy/Images/pickAsubject.png"))); // NOI18N
-
-        math.setBackground(java.awt.Color.green);
+        math.setBackground(new java.awt.Color(255, 255, 255));
         math.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        math.setForeground(java.awt.Color.white);
         math.setText("Math");
 
-        english.setBackground(java.awt.Color.red);
+        english.setBackground(new java.awt.Color(255, 255, 255));
         english.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        english.setForeground(java.awt.Color.white);
         english.setText("English");
 
-        science.setBackground(java.awt.Color.magenta);
+        science.setBackground(new java.awt.Color(255, 255, 255));
         science.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        science.setForeground(java.awt.Color.white);
         science.setText("Science");
         science.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,26 +79,21 @@ public class SubjectSelect extends javax.swing.JFrame {
             }
         });
 
-        history.setBackground(java.awt.Color.blue);
+        history.setBackground(new java.awt.Color(255, 255, 255));
         history.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        history.setForeground(java.awt.Color.white);
         history.setText("History");
 
-        french.setBackground(new java.awt.Color(255, 63, 123));
+        french.setBackground(new java.awt.Color(255, 255, 255));
         french.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        french.setForeground(java.awt.Color.white);
         french.setText("French");
 
-        FactPrompt.setBackground(java.awt.Color.black);
+        FactPrompt.setBackground(new java.awt.Color(255, 255, 255));
         FactPrompt.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        FactPrompt.setForeground(java.awt.Color.white);
         FactPrompt.setText("Did you know?");
 
         Fact.setEditable(false);
-        Fact.setBackground(java.awt.Color.black);
         Fact.setColumns(20);
         Fact.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Fact.setForeground(java.awt.Color.white);
         Fact.setLineWrap(true);
         Fact.setRows(5);
         String fact1 = "The primary school is Phumachangtang, Tibet, is thought to be the highest school in the world.";
@@ -130,23 +119,13 @@ public class SubjectSelect extends javax.swing.JFrame {
         Fact.setSelectionColor(java.awt.Color.white);
         jScrollPane1.setViewportView(Fact);
 
+        title.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        title.setText("Pick A Subject");
+
         javax.swing.GroupLayout RootWindowLayout = new javax.swing.GroupLayout(RootWindow);
         RootWindow.setLayout(RootWindowLayout);
         RootWindowLayout.setHorizontalGroup(
             RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RootWindowLayout.createSequentialGroup()
-                .addContainerGap(137, Short.MAX_VALUE)
-                .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RootWindowLayout.createSequentialGroup()
-                        .addComponent(title_img)
-                        .addGap(111, 111, 111))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RootWindowLayout.createSequentialGroup()
-                        .addComponent(FactPrompt)
-                        .addGap(218, 218, 218))))
-            .addGroup(RootWindowLayout.createSequentialGroup()
-                .addGap(204, 204, 204)
-                .addComponent(english, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RootWindowLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -160,19 +139,32 @@ public class SubjectSelect extends javax.swing.JFrame {
                             .addComponent(science, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(french, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(50, 50, 50))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RootWindowLayout.createSequentialGroup()
+                .addContainerGap(145, Short.MAX_VALUE)
+                .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RootWindowLayout.createSequentialGroup()
+                        .addComponent(FactPrompt)
+                        .addGap(218, 218, 218))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RootWindowLayout.createSequentialGroup()
+                        .addComponent(title)
+                        .addGap(143, 143, 143))))
+            .addGroup(RootWindowLayout.createSequentialGroup()
+                .addGap(199, 199, 199)
+                .addComponent(english, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         RootWindowLayout.setVerticalGroup(
             RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RootWindowLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(title_img)
-                .addGap(30, 30, 30)
+                .addGap(24, 24, 24)
+                .addComponent(title)
+                .addGap(18, 18, 18)
                 .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(math, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(science, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
+                .addGap(61, 61, 61)
                 .addComponent(english, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
+                .addGap(53, 53, 53)
                 .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(history, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(french, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -308,6 +300,6 @@ public class SubjectSelect extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton math;
     private javax.swing.JButton science;
-    private javax.swing.JLabel title_img;
+    private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

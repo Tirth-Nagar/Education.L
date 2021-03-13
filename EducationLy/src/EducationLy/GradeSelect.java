@@ -63,11 +63,11 @@ public class GradeSelect extends javax.swing.JFrame {
         RootWindow.setBackground(new java.awt.Color(255, 255, 255));
         RootWindow.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        Grade10.setBackground(java.awt.Color.green);
+        Grade10.setBackground(new java.awt.Color(255, 255, 255));
         Grade10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Grade10.setText("Grade 10");
 
-        Grade9.setBackground(java.awt.Color.red);
+        Grade9.setBackground(new java.awt.Color(255, 255, 255));
         Grade9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Grade9.setText("Grade 9");
         Grade9.addActionListener(new java.awt.event.ActionListener() {
@@ -76,11 +76,11 @@ public class GradeSelect extends javax.swing.JFrame {
             }
         });
 
-        Grade11.setBackground(java.awt.Color.yellow);
+        Grade11.setBackground(new java.awt.Color(255, 255, 255));
         Grade11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Grade11.setText("Grade 11");
 
-        Grade12.setBackground(java.awt.Color.cyan);
+        Grade12.setBackground(new java.awt.Color(255, 255, 255));
         Grade12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Grade12.setText("Grade 12");
 
@@ -211,7 +211,7 @@ public class GradeSelect extends javax.swing.JFrame {
 
     //When the about us tab on the menu bar is clicked tell the ueser about the purpose of the program and who made it
     private void AboutUsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AboutUsMouseClicked
-        javax.swing.JOptionPane.showMessageDialog(this,"This GUI application is made by Tirth Nagar using Jframe.\nIts purpose is to help educate students in our community.");
+        javax.swing.JOptionPane.showMessageDialog(this,"This GUI application is made by Education.Ly using Java.\nIts purpose is to help educate students in our community.");
     }//GEN-LAST:event_AboutUsMouseClicked
 
     // //When the grade 9 button is clicked make the current frame invisible and set the SubjectSelect frame visible
