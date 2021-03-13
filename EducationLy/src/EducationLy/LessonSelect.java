@@ -50,6 +50,7 @@ public class LessonSelect extends javax.swing.JFrame {
         Scienctist_img = new javax.swing.JLabel();
         scientistTools_img = new javax.swing.JLabel();
         whmis_img = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         MenuBar = new javax.swing.JMenuBar();
         File = new javax.swing.JMenu();
         Exit = new javax.swing.JMenuItem();
@@ -104,36 +105,44 @@ public class LessonSelect extends javax.swing.JFrame {
 
         whmis_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EducationLy/images/whmis.png"))); // NOI18N
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EducationLy/images/back.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout RootWindowLayout = new javax.swing.GroupLayout(RootWindow);
         RootWindow.setLayout(RootWindowLayout);
         RootWindowLayout.setHorizontalGroup(
             RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RootWindowLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(scientistTools_img, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(RootWindowLayout.createSequentialGroup()
-                        .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(scientistTools_img, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(RootWindowLayout.createSequentialGroup()
-                                .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Lesson6)
-                                    .addComponent(Lesson5)
-                                    .addComponent(Lesson2)
-                                    .addComponent(Lesson1)
-                                    .addComponent(Lesson4))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Scienctist_img, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(12, 12, 12)))
-                        .addContainerGap())
+                        .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Lesson6)
+                            .addComponent(Lesson5)
+                            .addComponent(Lesson2)
+                            .addComponent(Lesson1)
+                            .addComponent(Lesson4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Scienctist_img, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)))
+                .addContainerGap())
+            .addGroup(RootWindowLayout.createSequentialGroup()
+                .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(Lesson3, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(RootWindowLayout.createSequentialGroup()
-                        .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Lesson3, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(RootWindowLayout.createSequentialGroup()
-                                .addComponent(title)
-                                .addGap(30, 30, 30)))
+                        .addContainerGap()
+                        .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(whmis_img, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35))))
+                        .addComponent(title)
+                        .addGap(30, 30, 30)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(whmis_img, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35))
         );
         RootWindowLayout.setVerticalGroup(
             RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,8 +150,10 @@ public class LessonSelect extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(RootWindowLayout.createSequentialGroup()
-                        .addComponent(title)
-                        .addGap(18, 18, 18)
+                        .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(title)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Lesson3))
                     .addComponent(whmis_img, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -242,6 +253,11 @@ public class LessonSelect extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_Lesson3MouseClicked
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        new TopicSelect().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel1MouseClicked
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -289,6 +305,7 @@ public class LessonSelect extends javax.swing.JFrame {
     private javax.swing.JMenuBar MenuBar;
     private javax.swing.JPanel RootWindow;
     private javax.swing.JLabel Scienctist_img;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel scientistTools_img;
     private javax.swing.JLabel title;
     private javax.swing.JLabel whmis_img;

@@ -50,6 +50,7 @@ public class TopicSelect extends javax.swing.JFrame {
         FactPrompt = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Fact = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
         menuBar = new javax.swing.JMenuBar();
         File = new javax.swing.JMenu();
         Exit = new javax.swing.JMenuItem();
@@ -60,7 +61,6 @@ public class TopicSelect extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Education.Ly");
         setLocation(new java.awt.Point(0, 0));
-        setPreferredSize(new java.awt.Dimension(550, 500));
         setResizable(false);
         setSize(new java.awt.Dimension(550, 500));
 
@@ -127,6 +127,13 @@ public class TopicSelect extends javax.swing.JFrame {
         Fact.setSelectionColor(java.awt.Color.white);
         jScrollPane1.setViewportView(Fact);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EducationLy/images/back.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout RootWindowLayout = new javax.swing.GroupLayout(RootWindow);
         RootWindow.setLayout(RootWindowLayout);
         RootWindowLayout.setHorizontalGroup(
@@ -134,7 +141,9 @@ public class TopicSelect extends javax.swing.JFrame {
             .addGroup(RootWindowLayout.createSequentialGroup()
                 .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(RootWindowLayout.createSequentialGroup()
-                        .addGap(227, 227, 227)
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addGap(157, 157, 157)
                         .addComponent(title))
                     .addGroup(RootWindowLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
@@ -159,8 +168,10 @@ public class TopicSelect extends javax.swing.JFrame {
             RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RootWindowLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(title)
-                .addGap(18, 18, 18)
+                .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(title)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Unit1)
                 .addGap(18, 18, 18)
                 .addComponent(Unit2)
@@ -174,7 +185,7 @@ public class TopicSelect extends javax.swing.JFrame {
                 .addComponent(FactPrompt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         File.setText("File");
@@ -256,6 +267,11 @@ public class TopicSelect extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_Unit2MouseClicked
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        new SubjectSelect().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel1MouseClicked
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -303,6 +319,7 @@ public class TopicSelect extends javax.swing.JFrame {
     private javax.swing.JLabel Unit3;
     private javax.swing.JLabel Unit4;
     private javax.swing.JLabel Unit5;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JLabel title;

@@ -44,6 +44,7 @@ public class SubjectSelect extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Fact = new javax.swing.JTextArea();
         title = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         MenuBar = new javax.swing.JMenuBar();
         File = new javax.swing.JMenu();
         exit = new javax.swing.JMenuItem();
@@ -122,11 +123,26 @@ public class SubjectSelect extends javax.swing.JFrame {
         title.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         title.setText("Pick A Subject");
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EducationLy/images/back.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout RootWindowLayout = new javax.swing.GroupLayout(RootWindow);
         RootWindow.setLayout(RootWindowLayout);
         RootWindowLayout.setHorizontalGroup(
             RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RootWindowLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(FactPrompt)
+                .addGap(218, 218, 218))
+            .addGroup(RootWindowLayout.createSequentialGroup()
+                .addGap(199, 199, 199)
+                .addComponent(english, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(RootWindowLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane1)
@@ -139,26 +155,21 @@ public class SubjectSelect extends javax.swing.JFrame {
                             .addComponent(science, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(french, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(50, 50, 50))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RootWindowLayout.createSequentialGroup()
-                .addContainerGap(145, Short.MAX_VALUE)
-                .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RootWindowLayout.createSequentialGroup()
-                        .addComponent(FactPrompt)
-                        .addGap(218, 218, 218))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RootWindowLayout.createSequentialGroup()
-                        .addComponent(title)
-                        .addGap(143, 143, 143))))
             .addGroup(RootWindowLayout.createSequentialGroup()
-                .addGap(199, 199, 199)
-                .addComponent(english, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 10, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addComponent(title)
+                .addGap(143, 143, 143))
         );
         RootWindowLayout.setVerticalGroup(
             RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RootWindowLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(title)
-                .addGap(18, 18, 18)
+                .addContainerGap()
+                .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(title)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(RootWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(math, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(science, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -246,6 +257,11 @@ public class SubjectSelect extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_scienceActionPerformed
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        new GradeSelect().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel1MouseClicked
+
     public static void main(String args[]) throws IOException {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -297,6 +313,7 @@ public class SubjectSelect extends javax.swing.JFrame {
     private javax.swing.JMenuItem exit;
     private javax.swing.JButton french;
     private javax.swing.JButton history;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton math;
     private javax.swing.JButton science;

@@ -73,7 +73,7 @@ public class SlideShow extends javax.swing.JFrame {
         });
         getContentPane().add(next, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 670, 60, 50));
 
-        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EducationLy/images/back.png"))); // NOI18N
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EducationLy/images/backSlide.png"))); // NOI18N
         back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 backMouseClicked(evt);
