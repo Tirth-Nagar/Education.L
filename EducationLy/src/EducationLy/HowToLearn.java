@@ -207,7 +207,7 @@ public class HowToLearn extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
-            Desktop.getDesktop().open(new File("C:\\Users\\Tirth Nagar\\Documents\\GitHub\\Education.Ly\\EducationLy\\src\\EducationLy\\ScienceVideo.mp4"));
+            Desktop.getDesktop().open(new File("src/videos/ScienceVideo.mp4"));
         } catch (IOException ex) {
             Logger.getLogger(HowToLearn.class.getName()).log(Level.SEVERE, null, ex);
         }
