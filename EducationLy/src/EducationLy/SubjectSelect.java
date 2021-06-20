@@ -117,6 +117,7 @@ public class SubjectSelect extends javax.swing.JFrame {
         Fact.setWrapStyleWord(true);
         Fact.setBorder(null);
         Fact.setDisabledTextColor(java.awt.Color.white);
+        Fact.setHighlighter(null);
         Fact.setSelectionColor(java.awt.Color.white);
         jScrollPane1.setViewportView(Fact);
 

@@ -7,13 +7,9 @@ Purpose: To create the JFrame form that will act as a controlled slide show
 package EducationLy;
 
 //Import nessaccary packages
-import java.awt.AWTException;
 import java.awt.CardLayout;
 import java.awt.Dimension;
-import java.awt.Robot;
 import java.awt.Toolkit;
-import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
